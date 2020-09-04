@@ -1,0 +1,48 @@
+.header{
+    flex-wrap: wrap;
+    /* background-color: rgba(64, 75, 97, 0.9); */
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    
+    /* height: 100px; */
+}
+
+.header-btn{
+    display: block;
+    margin-right: 30px;
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    border-radius: 6px;
+}
+.fa{
+    color: #ffffff;
+}
+.icon i{
+    color: #b99a26;
+}
+.header-right-title{
+    display: none;
+    flex-direction: column;
+    width: 100vw;
+    order: 2;
+    background-color: #414b62;
+    margin-right: 0;
+    z-index: 99;
+    /* align-items: center; */
+    /* justify-content: center; */
+    
+}
+
+.email-input{
+    /* padding-left: 15px; */
+    padding-top: 30px;
+}
+
+.header-right-title a{
+    height: 64px;
+    line-height: 64px;
+    margin-left: 20px;
+    
+}
