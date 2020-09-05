@@ -312,3 +312,22 @@ input::-webkit-input-placeholder{
 textarea::-webkit-input-placeholder{
     color: #cfcfcf;
 }
+
+.send-button{
+    width: 100%;
+    text-align: center;
+}
+
+.send-btn{
+    background-color: #357ab7;
+    width: 100px;
+    height: 40px;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+/* .move{
+    display: none;
+} */

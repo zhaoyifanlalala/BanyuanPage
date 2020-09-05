@@ -16,11 +16,11 @@
         <header class="header">
             <div class="header-left-title">Ban<span style="color: #b89a24;">yuan</span></div>
             <div class="header-right-title">
-                <a href="bg-img" class="header-right-title-a">HOME</a>
-                <a href="home" class="header-right-title-a">ABOUT</a>
-                <a href="about" class="header-right-title-a">SERVICES</a>
-                <a href="services" class="header-right-title-a">BLOG</a>
-                <a href="contact-us" class="header-right-title-a">CONTACT US</a>
+                <a href="bg-img" class="header-right-title-a home-a">HOME</a>
+                <a href="home" class="header-right-title-a about-a">ABOUT</a>
+                <a href="about" class="header-right-title-a services-a">SERVICES</a>
+                <a href="services" class="header-right-title-a blog-a">BLOG</a>
+                <a href="contact-us" class="header-right-title-a contact-a">CONTACT US</a>
             </div>
             <!-- 缩小后出现的按钮 -->
             <button class="header-btn">
@@ -261,8 +261,11 @@
                             <textarea style="width: 100%; height: 150px;" placeholder="Message"></textarea>
                         </div>
                     </div>
+                    <div class="send-button">
+                        <button class="send-btn">Send Now</button>
+                    </div>
                 </div>
-
+                
             </div>
         </div>
     </div>
@@ -284,15 +287,20 @@
         controlHeader();
     })
 
+    // move()
     
     headerBtn.onclick = function () {
+        header.style.background = 'rgba(64, 75, 97, 0.9)'
         flag = !flag;
         if (flag == true) {
+            // move()
             HeaderRightTitle.style.display = 'flex';
             header.style.height = '100px';
+            
         }else{
             HeaderRightTitle.style.display = 'none';
             header.style.height = '80px';
+            header.style.background = 'rgba(0, 0, 0, 0)'
         }
         
     }
@@ -325,12 +333,86 @@
 
         if(scrollTop > 20){
             $('header').addClass('scroll');
+            $('header').css('background-color','rgba(64, 75, 97, 0.9)')
+            
         }else{
             $('header').removeClass('scroll');
+            $('header').css('background-color','rgba(0,0,0,0)')
+            
+        }
+    }
+
+    // function move() {
+
+    //     let width = document.documentElement.offsetWidth;
+
+    //     if (width > 1001) {
+    //         $('header-right-title').addClass('move');
+    //         // $('header-right-title').css('display','none');
+    //     }
+    // }
+
+    window.onresize=function(){
+
+        let width=document.documentElement.offsetWidth;
+
+        if(width > 1001){
+
+            HeaderRightTitle.style.display='none'
+
+            flag = false
         }
     }
 
 
+
+    let home = document.getElementsByClassName('home-a')[0];
+    let about = document.getElementsByClassName('about-a')[0];
+    let services = document.getElementsByClassName('services-a')[0];
+    let blog = document.getElementsByClassName('blog-a')[0];
+    let contact = document.getElementsByClassName('contact-a')[0];
+
+
+    $(home).click(function () {
+        $(home).css('color','#b89a24')
+
+        $(about).css('color','#ffffff')
+        $(services).css('color','#ffffff')
+        $(blog).css('color','#ffffff')
+        $(contact).css('color','#ffffff')
+    })
+    $(about).click(function () {
+        $(about).css('color','#b89a24')
+
+        $(home).css('color','#ffffff')
+        $(services).css('color','#ffffff')
+        $(blog).css('color','#ffffff')
+        $(contact).css('color','#ffffff')
+    })
+    $(services).click(function () {
+        $(services).css('color','#b89a24')
+
+        $(about).css('color','#ffffff')
+        $(home).css('color','#ffffff')
+        $(blog).css('color','#ffffff')
+        $(contact).css('color','#ffffff')
+    })
+    $(blog).click(function () {
+        $(blog).css('color','#b89a24')
+
+        $(about).css('color','#ffffff')
+        $(services).css('color','#ffffff')
+        $(home).css('color','#ffffff')
+        $(contact).css('color','#ffffff')
+    })
+    $(contact).click(function () {
+        $(contact).css('color','#b89a24')
+
+        $(about).css('color','#ffffff')
+        $(services).css('color','#ffffff')
+        $(blog).css('color','#ffffff')
+        $(home).css('color','#ffffff')
+    })
 </script>
 
 </html>
